@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ross Baker | Giftogram Chat API Test Page</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="icon" href="../favicon.ico" />
+    </head>
+    <body>
+        <h1>Giftogram Chat API Test Page</h1>
+        <h3>By Ross Baker</h3>
+
+        <hr />
+
+        <div class="container">
+            <h2>Register</h2>
+            <input type="email" id="register-email" placeholder="Email" />
+            <input type="password" id="register-password" placeholder="Password" />
+            <input type="text" id="register-first-name" placeholder="First Name" />
+            <input type="text" id="register-last-name" placeholder="Last Name" />
+            <button onclick="registerUser()">Register</button>
+            <pre id="register-response"></pre>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" />
+            <input type="password" id="login-password" placeholder="Password" />
+            <button onclick="loginUser()">Login</button>
+            <pre id="login-response"></pre>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h2>Send Message</h2>
+            <input type="text" id="sender-user-id" placeholder="Sender User ID" />
+            <input type="text" id="receiver-user-id" placeholder="Receiver User ID" />
+            <input type="text" id="message-text" placeholder="Message" />
+            <button onclick="sendMessage()">Send Message</button>
+            <pre id="send-message-response"></pre>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h2>View Messages</h2>
+            <input type="number" min="0" id="view-user-id-a" placeholder="User ID A" />
+            <input type="number" min="0" id="view-user-id-b" placeholder="User ID B" />
+            <button onclick="viewMessages()">View Messages</button>
+            <pre id="view-messages-response"></pre>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h2>List All Users (Excluding Requester User ID)</h2>
+            <input type="number" min="0" id="requester_user_id" placeholder="Requester User ID" />
+            <button onclick="listAllUsers()">List All Users</button>
+            <pre id="list-users-response"></pre>
+        </div>
+
+        <hr />
+
+        <!-- Local App Vars -->
+        <script src="app.local.js" onerror="console.error('Error loading app.local.js');"></script>
+
+        <!-- App -->
+        <script src="assets/js/main.js" onerror="console.error('Error loading main.js');"></script>
+    </body>
+</html>
